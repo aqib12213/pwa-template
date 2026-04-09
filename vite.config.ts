@@ -31,10 +31,11 @@ const config = defineConfig({
 			},
 		}),
 		VitePWA({
+			strategies: "injectManifest",
 			registerType: "prompt",
 			injectRegister: "auto",
-			srcDir: 'src',
-        	filename: 'sw.ts',
+			srcDir: "src",
+			filename: "sw.ts",
 
 			pwaAssets: {
 				disabled: false,
@@ -49,28 +50,9 @@ const config = defineConfig({
 				theme_color: "#fafafa",
 			},
 
-			workbox: {
+			injectManifest: {
 				globPatterns: ["**/*.{js,css,html,svg,png,ico,data,po}"],
-				cleanupOutdatedCaches: true,
-				clientsClaim: true,
 				sourcemap: true,
-
-				runtimeCaching: [
-					// {
-					// 	urlPattern: WASM_REGEX,
-					// 	handler: "CacheFirst",
-					// 	options: {
-					// 		cacheName: "wasm-cache",
-					// 	},
-					// },
-					// {
-					// 	urlPattern: DATA_SQL_REGEX,
-					// 	handler: "CacheFirst",
-					// 	options: {
-					// 		cacheName: "pglite-data-cache",
-					// 	},
-					// },
-				],
 			},
 
 			devOptions: {
