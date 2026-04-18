@@ -12,7 +12,7 @@ cleanupOutdatedCaches();
 precacheAndRoute(self.__WB_MANIFEST);
 
 self.addEventListener("message", (event: ExtendableMessageEvent) => {
-  if (event.data?.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
+	if (event.data?.type === "SKIP_WAITING") {
+		self.skipWaiting();
+	}
 });

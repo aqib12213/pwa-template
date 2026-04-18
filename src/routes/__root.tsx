@@ -5,6 +5,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import "../styles.css";
 import PWABadge from "@/components/pwa-badg";
 import { Toaster } from "@/components/ui/sonner";
+import { DexieCloudAuthDialog } from "@/features/auth/dexie-cloud-auth-dialog";
 import { GeneralError } from "@/features/errors/general-error";
 import { NotFoundError } from "@/features/errors/not-found-error";
 
@@ -18,6 +19,7 @@ function RootComponent() {
 	return (
 		<>
 			<Outlet />
+			<DexieCloudAuthDialog />
 			<Toaster position="top-center" />
 			<PWABadge />
 			<TanStackDevtools

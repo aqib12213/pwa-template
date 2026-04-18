@@ -21,10 +21,25 @@ msgstr "{activeCount} faal"
 msgid "{completedCount} completed"
 msgstr "{completedCount} mukammal"
 
-#: src/components/data/sidebar-data.ts:156
-msgid "Account"
-msgstr "Account"
+#: src/components/data-table/bulk-actions.tsx:206
+msgid "{selectedCount, plural, one {{entityName}} other {{entityName}s}}"
+msgstr "{selectedCount, plural, one {{entityName}} other {{entityName}s}}"
 
+#. placeholder {0}: selectedCount > 1 ? "s" : ""
+#: src/components/data-table/bulk-actions.tsx:49
+msgid "{selectedCount} {entityName}{0} selected. Bulk actions toolbar is available."
+msgstr "{selectedCount} {entityName}{0} muntakhab hain. Bulk actions toolbar dastiyab hai."
+
+#: src/components/data-table/bulk-actions.tsx:199
+msgid "{selectedCount} selected"
+msgstr "{selectedCount} muntakhab"
+
+#: src/components/data/sidebar-data.ts:156
+#~ msgid "Account"
+#~ msgstr "Account"
+
+#: src/features/donation/components/donation-table.tsx:163
+#: src/features/donation/components/donation-table.tsx:172
 #: src/routes/_authenticated/index.tsx:229
 msgid "Actions"
 msgstr "Karwaiyan"
@@ -49,13 +64,46 @@ msgstr "Apna pehla task shamil karein taa-ke apne kaam ko track karna shuru kare
 msgid "All"
 msgstr "Tamam"
 
+#: src/features/donation/components/donation-drawer.tsx:240
+#: src/features/donation/components/donation-drawer.tsx:245
+#: src/features/donation/components/donation-table.tsx:116
+msgid "Amount"
+msgstr "Raqam"
+
 #: src/components/data/sidebar-data.ts:161
-msgid "Appearance"
-msgstr "Appearance"
+#~ msgid "Appearance"
+#~ msgstr "Appearance"
 
 #: src/components/data/sidebar-data.ts:85
-msgid "Auth"
-msgstr "Auth"
+#~ msgid "Auth"
+#~ msgstr "Auth"
+
+#: src/features/donation/components/donation-drawer.tsx:395
+#~ msgid "Bank transfer"
+#~ msgstr ""
+
+#. placeholder {0}: selectedCount > 1 ? "s" : ""
+#: src/components/data-table/bulk-actions.tsx:150
+msgid "Bulk actions for {selectedCount} selected {entityName}{0}"
+msgstr "{selectedCount} muntakhab {entityName}{0} ke liye bulk actions"
+
+#: src/features/donation/components/donation-drawer.tsx:461
+msgid "Cancel"
+msgstr "Mansookh karein"
+
+#: src/features/donation/components/donation-drawer.tsx:392
+#~ msgid "Card"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:389
+#~ msgid "Cash"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:368
+#: src/features/donation/components/donation-drawer.tsx:372
+#: src/features/donation/components/donation-table.tsx:84
+msgid "Category"
+msgstr "Zumra"
 
 #: src/routes/_authenticated/index.tsx:80
 msgid "Churn Rate"
@@ -65,9 +113,23 @@ msgstr "Churn ki sharah"
 msgid "Clear completed"
 msgstr "Mukammal shuda saaf karein"
 
+#: src/components/data-table/bulk-actions.tsx:171
+#: src/components/data-table/bulk-actions.tsx:179
+msgid "Clear selection"
+msgstr "Intikhab saaf karein"
+
+#: src/components/data-table/bulk-actions.tsx:175
+#: src/components/data-table/bulk-actions.tsx:184
+msgid "Clear selection (Escape)"
+msgstr "Intikhab saaf karein (Escape)"
+
 #: src/routes/_authenticated/todo.tsx:154
 msgid "Completed"
 msgstr "Mukammal"
+
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:92
+msgid "Continue to your account."
+msgstr "Apne account par jari rakhein."
 
 #: src/routes/_authenticated/index.tsx:98
 msgid "Contractor Name"
@@ -77,14 +139,30 @@ msgstr "Thekedar ka naam"
 #~ msgid "Currencies"
 #~ msgstr "Currencies"
 
-#: src/components/data/sidebar-data.ts:70
-msgid "Customers"
-msgstr "Customers"
+#: src/features/donation/components/donation-drawer.tsx:274
+#: src/features/donation/components/donation-table.tsx:104
+msgid "Currency"
+msgstr "Karansi"
 
-#: src/components/data/sidebar-data.ts:55
+#: src/components/data/sidebar-data.ts:70
+#~ msgid "Customers"
+#~ msgstr "Customers"
+
+#: src/components/data/sidebar-data.ts:41
+#: src/features/donation/DonationRoute.tsx:139
 #: src/routes/_authenticated/index.tsx:110
 msgid "Dashboard"
 msgstr "Dashboard"
+
+#: src/features/donation/components/donation-drawer.tsx:330
+#: src/features/donation/components/donation-drawer.tsx:334
+#: src/features/donation/components/donation-table.tsx:58
+msgid "Date"
+msgstr "Tareekh"
+
+#: src/features/donation/components/donation-table.tsx:191
+msgid "Delete"
+msgstr "Delete karein"
 
 #: src/routes/_authenticated/todo.tsx:216
 msgid "Delete task"
@@ -95,44 +173,91 @@ msgid "Dexie Todo App"
 msgstr "Dexie Todo App"
 
 #: src/components/data/sidebar-data.ts:171
-msgid "Display"
-msgstr "Display"
+#~ msgid "Display"
+#~ msgstr "Display"
 
+#: src/components/data/sidebar-data.ts:46
+#: src/features/donation/DonationRoute.tsx:158
+msgid "Donations"
+msgstr "Atiyat"
+
+#: src/features/donation/components/donation-table.tsx:72
+msgid "Donor"
+msgstr "Atiya dene wala"
+
+#: src/features/donation/components/donation-drawer.tsx:186
+#: src/features/donation/components/donation-drawer.tsx:190
+msgid "Donor name"
+msgstr "Atiya dene walay ka naam"
+
+#: src/features/donation/components/donation-drawer.tsx:253
+msgid "e.g., 200.00"
+msgstr "misal ke taur par, 200.00"
+
+#: src/features/donation/components/donation-drawer.tsx:243
+#~ msgid "e.g., 25.00"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:379
+msgid "e.g., General"
+msgstr "misal ke taur par, General"
+
+#: src/features/donation/components/donation-drawer.tsx:197
+msgid "e.g., John Doe"
+msgstr "misal ke taur par, John Doe"
+
+#: src/features/donation/components/donation-table.tsx:183
 #: src/routes/_authenticated/index.tsx:100
 #: src/routes/_authenticated/index.tsx:225
 msgid "Edit"
 msgstr "Edit"
 
+#: src/features/donation/components/donation-drawer.tsx:152
+msgid "Edit donation"
+msgstr "Atiya edit karein"
+
 #: src/routes/_authenticated/index.tsx:278
 msgid "Efficiency Alert"
 msgstr "Karkardagi ka intibah"
 
-#: src/components/data/sidebar-data.ts:42
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:42
+msgid "Email"
+msgstr "Email"
+
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:91
+msgid "Enter the code sent to your email to finish signing in."
+msgstr "Sign in mukammal karne ke liye apni email par bheja gaya code daakhil karein."
+
+#: src/components/data/sidebar-data.ts:28
 msgid "Enterprise"
 msgstr "Enterprise"
 
 #: src/components/data/sidebar-data.ts:111
-msgid "Errors"
-msgstr "Errors"
+#~ msgid "Errors"
+#~ msgstr "Errors"
+
+#: src/components/data/sidebar-data.ts:51
+msgid "Expenses"
+msgstr "Akhrajat"
 
 #: src/routes/_authenticated/index.tsx:145
 msgid "Financial overview for the current fiscal period."
 msgstr "Mojooda mali muddat ka mali jaiza."
 
 #: src/components/data/sidebar-data.ts:120
-msgid "Forbidden"
-msgstr "Forbidden"
+#~ msgid "Forbidden"
+#~ msgstr "Forbidden"
 
 #: src/components/data/sidebar-data.ts:101
-msgid "Forgot Password"
-msgstr "Forgot Password"
+#~ msgid "Forgot Password"
+#~ msgstr "Forgot Password"
 
-#: src/components/data/sidebar-data.ts:52
+#: src/components/data/sidebar-data.ts:38
 msgid "General"
 msgstr "General"
 
-#: src/components/app-sidebar.tsx:41
-#: src/components/app-sidebar.tsx:44
+#: src/components/app-sidebar.tsx:50
+#: src/components/app-sidebar.tsx:53
 msgid "Help Center"
 msgstr "Help Center"
 
@@ -145,12 +270,12 @@ msgid "Insights"
 msgstr "Baseeratain"
 
 #: src/components/data/sidebar-data.ts:130
-msgid "Internal Server Error"
-msgstr "Internal Server Error"
+#~ msgid "Internal Server Error"
+#~ msgstr "Internal Server Error"
 
 #: src/components/data/sidebar-data.ts:65
-msgid "Items"
-msgstr "Items"
+#~ msgid "Items"
+#~ msgstr "Items"
 
 #: src/routes/_authenticated/index.tsx:81
 msgid "Last 30 days"
@@ -161,8 +286,12 @@ msgid "Last 60 days"
 msgstr "Guzishta 60 din"
 
 #: src/components/data/sidebar-data.ts:135
-msgid "Maintenance Error"
-msgstr "Maintenance Error"
+#~ msgid "Maintenance Error"
+#~ msgstr "Maintenance Error"
+
+#: src/features/donation/components/donation-drawer.tsx:398
+#~ msgid "Mobile money"
+#~ msgstr ""
 
 #: src/routes/_authenticated/index.tsx:219
 msgid "Name"
@@ -172,34 +301,64 @@ msgstr "Naam"
 msgid "New Customers"
 msgstr "Naye gahak"
 
+#: src/features/donation/components/donation-empty.tsx:19
+msgid "No donations"
+msgstr "Koi atiyat nahi"
+
+#: src/features/donation/components/donation-table.tsx:372
+msgid "No donations found."
+msgstr "Koi atiyat nahi milay."
+
 #: src/routes/_authenticated/todo.tsx:178
 msgid "No tasks yet"
 msgstr "Abhi koi task nahi"
 
 #: src/components/data/sidebar-data.ts:125
-msgid "Not Found"
-msgstr "Not Found"
+#~ msgid "Not Found"
+#~ msgstr "Not Found"
 
-#: src/components/data/sidebar-data.ts:166
+#: src/features/donation/components/donation-drawer.tsx:436
+#: src/features/donation/components/donation-drawer.tsx:439
+#: src/features/donation/components/donation-table.tsx:148
+msgid "Notes"
+msgstr "Notes"
+
 #: src/routes/_authenticated/index.tsx:129
 msgid "Notifications"
 msgstr "Ittilaat"
 
-#: src/components/data/sidebar-data.ts:144
-msgid "Other"
-msgstr "Other"
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:46
+msgid "One-Time Password"
+msgstr "One-Time Password"
+
+#: src/features/donation/components/donation-drawer.tsx:446
+msgid "Optional"
+msgstr "Ikhtiyari"
+
+#: src/features/donation/components/donation-drawer.tsx:401
+#~ msgid "Other"
+#~ msgstr "Other"
 
 #: src/components/data/sidebar-data.ts:105
-msgid "OTP"
-msgstr "OTP"
+#~ msgid "OTP"
+#~ msgstr "OTP"
 
 #: src/components/data/sidebar-data.ts:82
-msgid "Pages"
-msgstr "Pages"
+#~ msgid "Pages"
+#~ msgstr "Pages"
+
+#: src/features/donation/components/donation-table.tsx:94
+msgid "Payment"
+msgstr "Adaigi"
+
+#: src/features/donation/components/donation-drawer.tsx:403
+#: src/features/donation/components/donation-drawer.tsx:407
+msgid "Payment method"
+msgstr "Adaigi ka tareeqa"
 
 #: src/components/data/sidebar-data.ts:151
-msgid "Profile"
-msgstr "Profile"
+#~ msgid "Profile"
+#~ msgstr "Profile"
 
 #: src/routes/_authenticated/index.tsx:292
 msgid "Projected Growth"
@@ -209,9 +368,41 @@ msgstr "Mutawaqqa taraqqi"
 msgid "Recent Transactions"
 msgstr "Haalia lain den"
 
+#: src/features/donation/components/donation-drawer.tsx:458
+msgid "Record"
+msgstr "Record"
+
+#: src/features/donation/DonationRoute.tsx:161
+msgid "Record and edit donations"
+msgstr "Atiyat record aur edit karein"
+
+#: src/features/donation/components/donation-drawer.tsx:154
+msgid "Record donation"
+msgstr "Atiya record karein"
+
+#: src/features/donation/components/donation-drawer.tsx:145
+msgid "Record Donation"
+msgstr "Atiya Record Karein"
+
+#: src/features/donation/components/donation-empty.tsx:22
+msgid "Record your first donation to start tracking."
+msgstr "Tracking shuru karne ke liye apna pehla atiya record karein."
+
+#: src/components/data/sidebar-data.ts:56
+msgid "Reports"
+msgstr "Reports"
+
+#: src/features/donation/components/donation-drawer.tsx:458
+msgid "Save"
+msgstr "Save"
+
 #: src/routes/_authenticated/index.tsx:120
 msgid "Search"
 msgstr "Talaash"
+
+#: src/features/donation/components/donation-table.tsx:259
+msgid "Search donations..."
+msgstr "Atiyat talaash karein..."
 
 #: src/routes/_authenticated/index.tsx:122
 msgid "Search for something..."
@@ -221,25 +412,38 @@ msgstr "Kuch talaash karein..."
 #~ msgid "Seed Data"
 #~ msgstr "Seed Data"
 
-#: src/components/data/sidebar-data.ts:147
+#: src/features/donation/components/donation-drawer.tsx:415
+msgid "Select a payment method"
+msgstr "Adaigi ka tareeqa muntakhab karein"
+
+#: src/components/data-table/bulk-actions.tsx:211
+msgid "selected"
+msgstr "muntakhab"
+
+#: src/components/app-sidebar.tsx:41
+#: src/components/app-sidebar.tsx:44
 msgid "Settings"
 msgstr "Settings"
 
 #: src/components/data/sidebar-data.ts:89
-msgid "Sign In"
-msgstr "Sign In"
+#~ msgid "Sign In"
+#~ msgstr "Sign In"
 
 #: src/components/data/sidebar-data.ts:93
-msgid "Sign In (2 Col)"
-msgstr "Sign In (2 Col)"
+#~ msgid "Sign In (2 Col)"
+#~ msgstr "Sign In (2 Col)"
 
 #: src/components/data/sidebar-data.ts:97
-msgid "Sign Up"
-msgstr "Sign Up"
+#~ msgid "Sign Up"
+#~ msgstr "Sign Up"
 
-#: src/components/data/sidebar-data.ts:47
+#: src/components/data/sidebar-data.ts:33
 msgid "Startup"
 msgstr "Startup"
+
+#: src/features/donation/components/donation-table.tsx:134
+msgid "Status"
+msgstr "Status"
 
 #: src/routes/_authenticated/index.tsx:99
 msgid "Subscription"
@@ -261,10 +465,13 @@ msgstr "Task ka unwan"
 msgid "This quarter"
 msgstr "Is seh mahi"
 
-#: src/components/data/sidebar-data.ts:60
 #: src/routes/_authenticated/todo.tsx:87
 msgid "Todo"
 msgstr "Todo"
+
+#: src/features/donation/components/donation-table.tsx:273
+msgid "Toggle columns"
+msgstr "Columns toggle karein"
 
 #: src/routes/_authenticated/todo.tsx:195
 msgid "Toggle task"
@@ -275,12 +482,12 @@ msgid "Total Sales & Cost"
 msgstr "Kul farokht aur lagat"
 
 #: src/components/data/sidebar-data.ts:115
-msgid "Unauthorized"
-msgstr "Unauthorized"
+#~ msgid "Unauthorized"
+#~ msgstr "Unauthorized"
 
 #: src/components/data/sidebar-data.ts:75
-msgid "Vendors"
-msgstr "Vendors"
+#~ msgid "Vendors"
+#~ msgstr "Vendors"
 
 #: src/routes/_authenticated/index.tsx:209
 msgid "View all"

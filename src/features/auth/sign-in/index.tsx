@@ -19,8 +19,8 @@ export function SignIn() {
 				<CardHeader>
 					<CardTitle className="text-lg tracking-tight">Sign in</CardTitle>
 					<CardDescription>
-						Enter your email and password below to <br />
-						log into your account
+						Enter your email to receive a one-time <br />
+						passcode and sign in securely.
 					</CardDescription>
 				</CardHeader>
 				<CardContent>

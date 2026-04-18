@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 import { Link } from "@tanstack/react-router";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, Settings } from "lucide-react";
 import type * as React from "react";
 import { useDirection } from "@/components/ui/direction";
 import {
@@ -35,6 +35,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 				))}
 			</SidebarContent>
 			<SidebarFooter>
+				<SidebarMenuItem>
+					<SidebarMenuButton
+						render={<Link to={"/settings"} />}
+						tooltip={t`Settings`}
+					>
+						<Settings className="size-5" />
+						<span>{t`Settings`}</span>
+					</SidebarMenuButton>
+				</SidebarMenuItem>
 				<SidebarMenuItem>
 					<SidebarMenuButton
 						render={<Link to={"/help-center"} />}

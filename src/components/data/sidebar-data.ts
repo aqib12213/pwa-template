@@ -1,26 +1,12 @@
 import { t } from "@lingui/core/macro";
 import {
 	AudioWaveform,
-	Bell,
-	Bug,
+	ChartPie,
 	Command,
-	Construction,
-	FileX,
+	CreditCard,
 	GalleryVerticalEnd,
+	HandCoins,
 	LayoutDashboard,
-	ListTodo,
-	Lock,
-	Monitor,
-	Palette,
-	ServerOff,
-	Settings,
-	ShieldCheck,
-	ShoppingBag,
-	Store,
-	UserCog,
-	Users,
-	UserX,
-	Wrench,
 } from "lucide-react";
 import type { SidebarData } from "../nav-group-types";
 
@@ -32,7 +18,7 @@ export const getSidebarData = (): SidebarData => ({
 	},
 	teams: [
 		{
-			name: "Shadcn Admin",
+			name: "Donation Client",
 			logo: Command,
 			plan: "Vite + ShadcnUI",
 		},
@@ -57,129 +43,124 @@ export const getSidebarData = (): SidebarData => ({
 					icon: LayoutDashboard,
 				},
 				{
-					title: t`Todo`,
-					url: "/todo",
-					icon: ListTodo,
+					title: t`Donations`,
+					url: "/donations",
+					icon: HandCoins,
 				},
 				{
-					title: t`Items`,
-					url: "/items",
-					icon: ShoppingBag,
+					title: t`Expenses`,
+					url: "/expenses",
+					icon: CreditCard,
 				},
 				{
-					title: t`Customers`,
-					url: "/customers",
-					icon: Users,
-				},
-				{
-					title: t`Vendors`,
-					url: "/vendors",
-					icon: Store,
+					title: t`Reports`,
+					url: "/reports",
+					icon: ChartPie,
 				},
 			],
 		},
-		{
-			title: t`Pages`,
-			items: [
-				{
-					title: t`Auth`,
-					icon: ShieldCheck,
-					items: [
-						{
-							title: t`Sign In`,
-							url: "/sign-in",
-						},
-						{
-							title: t`Sign In (2 Col)`,
-							url: "/sign-in-2",
-						},
-						{
-							title: t`Sign Up`,
-							url: "/sign-up",
-						},
-						{
-							title: t`Forgot Password`,
-							url: "/forgot-password",
-						},
-						{
-							title: t`OTP`,
-							url: "/otp",
-						},
-					],
-				},
-				{
-					title: t`Errors`,
-					icon: Bug,
-					items: [
-						{
-							title: t`Unauthorized`,
-							url: "/errors/unauthorized",
-							icon: Lock,
-						},
-						{
-							title: t`Forbidden`,
-							url: "/errors/forbidden",
-							icon: UserX,
-						},
-						{
-							title: t`Not Found`,
-							url: "/errors/not-found",
-							icon: FileX,
-						},
-						{
-							title: t`Internal Server Error`,
-							url: "/errors/internal-server-error",
-							icon: ServerOff,
-						},
-						{
-							title: t`Maintenance Error`,
-							url: "/errors/maintenance-error",
-							icon: Construction,
-						},
-					],
-				},
-			],
-		},
-		{
-			title: t`Other`,
-			items: [
-				{
-					title: t`Settings`,
-					icon: Settings,
-					items: [
-						{
-							title: t`Profile`,
-							url: "/settings",
-							icon: UserCog,
-						},
-						{
-							title: t`Account`,
-							url: "/settings/account",
-							icon: Wrench,
-						},
-						{
-							title: t`Appearance`,
-							url: "/settings/appearance",
-							icon: Palette,
-						},
-						{
-							title: t`Notifications`,
-							url: "/settings/notifications",
-							icon: Bell,
-						},
-						{
-							title: t`Display`,
-							url: "/settings/display",
-							icon: Monitor,
-						},
-					],
-				},
-				// {
-				// 	title: t`Help Center`,
-				// 	url: "/help-center",
-				// 	icon: HelpCircle,
-				// },
-			],
-		},
+		// {
+		// 	title: t`Pages`,
+		// 	items: [
+		// 		{
+		// 			title: t`Auth`,
+		// 			icon: ShieldCheck,
+		// 			items: [
+		// 				{
+		// 					title: t`Sign In`,
+		// 					url: "/sign-in",
+		// 				},
+		// 				{
+		// 					title: t`Sign In (2 Col)`,
+		// 					url: "/sign-in-2",
+		// 				},
+		// 				{
+		// 					title: t`Sign Up`,
+		// 					url: "/sign-up",
+		// 				},
+		// 				{
+		// 					title: t`Forgot Password`,
+		// 					url: "/forgot-password",
+		// 				},
+		// 				{
+		// 					title: t`OTP`,
+		// 					url: "/otp",
+		// 				},
+		// 			],
+		// 		},
+		// 		{
+		// 			title: t`Errors`,
+		// 			icon: Bug,
+		// 			items: [
+		// 				{
+		// 					title: t`Unauthorized`,
+		// 					url: "/errors/unauthorized",
+		// 					icon: Lock,
+		// 				},
+		// 				{
+		// 					title: t`Forbidden`,
+		// 					url: "/errors/forbidden",
+		// 					icon: UserX,
+		// 				},
+		// 				{
+		// 					title: t`Not Found`,
+		// 					url: "/errors/not-found",
+		// 					icon: FileX,
+		// 				},
+		// 				{
+		// 					title: t`Internal Server Error`,
+		// 					url: "/errors/internal-server-error",
+		// 					icon: ServerOff,
+		// 				},
+		// 				{
+		// 					title: t`Maintenance Error`,
+		// 					url: "/errors/maintenance-error",
+		// 					icon: Construction,
+		// 				},
+		// 			],
+		// 		},
+		// 	],
+		// },
+		// {
+		// 	title: t`Other`,
+		// 	items: [
+		// 		{
+		// 			title: t`Settings`,
+		// 			icon: Settings,
+		// 			items: [
+		// 				{
+		// 					title: t`Profile`,
+		// 					url: "/settings",
+		// 					icon: UserCog,
+		// 				},
+		// 				{
+		// 					title: t`Account`,
+		// 					url: "/settings/account",
+		// 					icon: Wrench,
+		// 				},
+		// 				{
+		// 					title: t`Appearance`,
+		// 					url: "/settings/appearance",
+		// 					icon: Palette,
+		// 				},
+		// 				{
+		// 					title: t`Notifications`,
+		// 					url: "/settings/notifications",
+		// 					icon: Bell,
+		// 				},
+		// 				{
+		// 					title: t`Display`,
+		// 					url: "/settings/display",
+		// 					icon: Monitor,
+		// 				},
+		// 			],
+		// 		},
+		// 		// {
+		// 		// 	title: t`Help Center`,
+		// 		// 	url: "/help-center",
+		// 		// 	icon: HelpCircle,
+		// 		// },
+		// 	],
+		// },
 	],
 });

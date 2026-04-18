@@ -21,10 +21,25 @@ msgstr "{activeCount} فعال"
 msgid "{completedCount} completed"
 msgstr "{completedCount} مکمل"
 
-#: src/components/data/sidebar-data.ts:156
-msgid "Account"
-msgstr "اکاؤنٹ"
+#: src/components/data-table/bulk-actions.tsx:206
+msgid "{selectedCount, plural, one {{entityName}} other {{entityName}s}}"
+msgstr "{selectedCount, plural, one {{entityName}} other {{entityName}s}}"
 
+#. placeholder {0}: selectedCount > 1 ? "s" : ""
+#: src/components/data-table/bulk-actions.tsx:49
+msgid "{selectedCount} {entityName}{0} selected. Bulk actions toolbar is available."
+msgstr "{selectedCount} {entityName}{0} منتخب ہیں۔ بلک ایکشنز ٹول بار دستیاب ہے۔"
+
+#: src/components/data-table/bulk-actions.tsx:199
+msgid "{selectedCount} selected"
+msgstr "{selectedCount} منتخب"
+
+#: src/components/data/sidebar-data.ts:156
+#~ msgid "Account"
+#~ msgstr "اکاؤنٹ"
+
+#: src/features/donation/components/donation-table.tsx:163
+#: src/features/donation/components/donation-table.tsx:172
 #: src/routes/_authenticated/index.tsx:229
 msgid "Actions"
 msgstr "کارروائیاں"
@@ -49,13 +64,46 @@ msgstr "اپنا پہلا کام شامل کریں تاکہ اپنے کام کا
 msgid "All"
 msgstr "تمام"
 
+#: src/features/donation/components/donation-drawer.tsx:240
+#: src/features/donation/components/donation-drawer.tsx:245
+#: src/features/donation/components/donation-table.tsx:116
+msgid "Amount"
+msgstr "رقم"
+
 #: src/components/data/sidebar-data.ts:161
-msgid "Appearance"
-msgstr "ظاہری شکل"
+#~ msgid "Appearance"
+#~ msgstr "ظاہری شکل"
 
 #: src/components/data/sidebar-data.ts:85
-msgid "Auth"
-msgstr "تصدیق"
+#~ msgid "Auth"
+#~ msgstr "تصدیق"
+
+#: src/features/donation/components/donation-drawer.tsx:395
+#~ msgid "Bank transfer"
+#~ msgstr ""
+
+#. placeholder {0}: selectedCount > 1 ? "s" : ""
+#: src/components/data-table/bulk-actions.tsx:150
+msgid "Bulk actions for {selectedCount} selected {entityName}{0}"
+msgstr "{selectedCount} منتخب {entityName}{0} کے لیے بلک ایکشنز"
+
+#: src/features/donation/components/donation-drawer.tsx:461
+msgid "Cancel"
+msgstr "منسوخ کریں"
+
+#: src/features/donation/components/donation-drawer.tsx:392
+#~ msgid "Card"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:389
+#~ msgid "Cash"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:368
+#: src/features/donation/components/donation-drawer.tsx:372
+#: src/features/donation/components/donation-table.tsx:84
+msgid "Category"
+msgstr "زمرہ"
 
 #: src/routes/_authenticated/index.tsx:80
 msgid "Churn Rate"
@@ -65,9 +113,23 @@ msgstr "چرن ریٹ"
 msgid "Clear completed"
 msgstr "مکمل شدہ صاف کریں"
 
+#: src/components/data-table/bulk-actions.tsx:171
+#: src/components/data-table/bulk-actions.tsx:179
+msgid "Clear selection"
+msgstr "انتخاب صاف کریں"
+
+#: src/components/data-table/bulk-actions.tsx:175
+#: src/components/data-table/bulk-actions.tsx:184
+msgid "Clear selection (Escape)"
+msgstr "انتخاب صاف کریں (Escape)"
+
 #: src/routes/_authenticated/todo.tsx:154
 msgid "Completed"
 msgstr "مکمل شدہ"
+
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:92
+msgid "Continue to your account."
+msgstr "اپنے اکاؤنٹ پر جاری رکھیں۔"
 
 #: src/routes/_authenticated/index.tsx:98
 msgid "Contractor Name"
@@ -77,14 +139,30 @@ msgstr "ٹھیکیدار کا نام"
 #~ msgid "Currencies"
 #~ msgstr "کرنسیاں"
 
-#: src/components/data/sidebar-data.ts:70
-msgid "Customers"
-msgstr "گاہک"
+#: src/features/donation/components/donation-drawer.tsx:274
+#: src/features/donation/components/donation-table.tsx:104
+msgid "Currency"
+msgstr "کرنسی"
 
-#: src/components/data/sidebar-data.ts:55
+#: src/components/data/sidebar-data.ts:70
+#~ msgid "Customers"
+#~ msgstr "گاہک"
+
+#: src/components/data/sidebar-data.ts:41
+#: src/features/donation/DonationRoute.tsx:139
 #: src/routes/_authenticated/index.tsx:110
 msgid "Dashboard"
 msgstr "ڈیش بورڈ"
+
+#: src/features/donation/components/donation-drawer.tsx:330
+#: src/features/donation/components/donation-drawer.tsx:334
+#: src/features/donation/components/donation-table.tsx:58
+msgid "Date"
+msgstr "تاریخ"
+
+#: src/features/donation/components/donation-table.tsx:191
+msgid "Delete"
+msgstr "حذف کریں"
 
 #: src/routes/_authenticated/todo.tsx:216
 msgid "Delete task"
@@ -95,44 +173,91 @@ msgid "Dexie Todo App"
 msgstr "ڈیکسی ٹوڈو ایپ"
 
 #: src/components/data/sidebar-data.ts:171
-msgid "Display"
-msgstr "ڈسپلے"
+#~ msgid "Display"
+#~ msgstr "ڈسپلے"
 
+#: src/components/data/sidebar-data.ts:46
+#: src/features/donation/DonationRoute.tsx:158
+msgid "Donations"
+msgstr "عطیات"
+
+#: src/features/donation/components/donation-table.tsx:72
+msgid "Donor"
+msgstr "عطیہ دہندہ"
+
+#: src/features/donation/components/donation-drawer.tsx:186
+#: src/features/donation/components/donation-drawer.tsx:190
+msgid "Donor name"
+msgstr "عطیہ دہندہ کا نام"
+
+#: src/features/donation/components/donation-drawer.tsx:253
+msgid "e.g., 200.00"
+msgstr "مثلاً 200.00"
+
+#: src/features/donation/components/donation-drawer.tsx:243
+#~ msgid "e.g., 25.00"
+#~ msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:379
+msgid "e.g., General"
+msgstr "مثلاً جنرل"
+
+#: src/features/donation/components/donation-drawer.tsx:197
+msgid "e.g., John Doe"
+msgstr "مثلاً John Doe"
+
+#: src/features/donation/components/donation-table.tsx:183
 #: src/routes/_authenticated/index.tsx:100
 #: src/routes/_authenticated/index.tsx:225
 msgid "Edit"
 msgstr "ترمیم"
 
+#: src/features/donation/components/donation-drawer.tsx:152
+msgid "Edit donation"
+msgstr "عطیہ میں ترمیم کریں"
+
 #: src/routes/_authenticated/index.tsx:278
 msgid "Efficiency Alert"
 msgstr "کارکردگی کا انتباہ"
 
-#: src/components/data/sidebar-data.ts:42
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:42
+msgid "Email"
+msgstr "ای میل"
+
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:91
+msgid "Enter the code sent to your email to finish signing in."
+msgstr "سائن اِن مکمل کرنے کے لیے اپنے ای میل پر بھیجا گیا کوڈ درج کریں۔"
+
+#: src/components/data/sidebar-data.ts:28
 msgid "Enterprise"
 msgstr "انٹرپرائز"
 
 #: src/components/data/sidebar-data.ts:111
-msgid "Errors"
-msgstr "خرابیاں"
+#~ msgid "Errors"
+#~ msgstr "خرابیاں"
+
+#: src/components/data/sidebar-data.ts:51
+msgid "Expenses"
+msgstr "اخراجات"
 
 #: src/routes/_authenticated/index.tsx:145
 msgid "Financial overview for the current fiscal period."
 msgstr "موجودہ مالیاتی سال کے لیے مالیاتی جائزہ۔"
 
 #: src/components/data/sidebar-data.ts:120
-msgid "Forbidden"
-msgstr "ممنوع"
+#~ msgid "Forbidden"
+#~ msgstr "ممنوع"
 
 #: src/components/data/sidebar-data.ts:101
-msgid "Forgot Password"
-msgstr "پاس ورڈ بھول گئے"
+#~ msgid "Forgot Password"
+#~ msgstr "پاس ورڈ بھول گئے"
 
-#: src/components/data/sidebar-data.ts:52
+#: src/components/data/sidebar-data.ts:38
 msgid "General"
 msgstr "عمومی"
 
-#: src/components/app-sidebar.tsx:41
-#: src/components/app-sidebar.tsx:44
+#: src/components/app-sidebar.tsx:50
+#: src/components/app-sidebar.tsx:53
 msgid "Help Center"
 msgstr "مرکزِ مدد"
 
@@ -145,12 +270,12 @@ msgid "Insights"
 msgstr "بصیرتیں"
 
 #: src/components/data/sidebar-data.ts:130
-msgid "Internal Server Error"
-msgstr "اندرونی سرور خرابی"
+#~ msgid "Internal Server Error"
+#~ msgstr "اندرونی سرور خرابی"
 
 #: src/components/data/sidebar-data.ts:65
-msgid "Items"
-msgstr "اشیاء"
+#~ msgid "Items"
+#~ msgstr "اشیاء"
 
 #: src/routes/_authenticated/index.tsx:81
 msgid "Last 30 days"
@@ -161,8 +286,12 @@ msgid "Last 60 days"
 msgstr "گزشتہ 60 دن"
 
 #: src/components/data/sidebar-data.ts:135
-msgid "Maintenance Error"
-msgstr "دیکھ بھال کی خرابی"
+#~ msgid "Maintenance Error"
+#~ msgstr "دیکھ بھال کی خرابی"
+
+#: src/features/donation/components/donation-drawer.tsx:398
+#~ msgid "Mobile money"
+#~ msgstr ""
 
 #: src/routes/_authenticated/index.tsx:219
 msgid "Name"
@@ -172,34 +301,64 @@ msgstr "نام"
 msgid "New Customers"
 msgstr "نئے گاہک"
 
+#: src/features/donation/components/donation-empty.tsx:19
+msgid "No donations"
+msgstr "کوئی عطیہ نہیں"
+
+#: src/features/donation/components/donation-table.tsx:372
+msgid "No donations found."
+msgstr "کوئی عطیات نہیں ملے۔"
+
 #: src/routes/_authenticated/todo.tsx:178
 msgid "No tasks yet"
 msgstr "ابھی تک کوئی کام نہیں"
 
 #: src/components/data/sidebar-data.ts:125
-msgid "Not Found"
-msgstr "نہیں ملا"
+#~ msgid "Not Found"
+#~ msgstr "نہیں ملا"
 
-#: src/components/data/sidebar-data.ts:166
+#: src/features/donation/components/donation-drawer.tsx:436
+#: src/features/donation/components/donation-drawer.tsx:439
+#: src/features/donation/components/donation-table.tsx:148
+msgid "Notes"
+msgstr "نوٹس"
+
 #: src/routes/_authenticated/index.tsx:129
 msgid "Notifications"
 msgstr "اطلاعات"
 
-#: src/components/data/sidebar-data.ts:144
-msgid "Other"
-msgstr "دیگر"
+#: src/features/auth/dexie-cloud-auth-dialog.tsx:46
+msgid "One-Time Password"
+msgstr "ون ٹائم پاس ورڈ"
+
+#: src/features/donation/components/donation-drawer.tsx:446
+msgid "Optional"
+msgstr "اختیاری"
+
+#: src/features/donation/components/donation-drawer.tsx:401
+#~ msgid "Other"
+#~ msgstr "دیگر"
 
 #: src/components/data/sidebar-data.ts:105
-msgid "OTP"
-msgstr "او ٹی پی"
+#~ msgid "OTP"
+#~ msgstr "او ٹی پی"
 
 #: src/components/data/sidebar-data.ts:82
-msgid "Pages"
-msgstr "صفحات"
+#~ msgid "Pages"
+#~ msgstr "صفحات"
+
+#: src/features/donation/components/donation-table.tsx:94
+msgid "Payment"
+msgstr "ادائیگی"
+
+#: src/features/donation/components/donation-drawer.tsx:403
+#: src/features/donation/components/donation-drawer.tsx:407
+msgid "Payment method"
+msgstr "ادائیگی کا طریقہ"
 
 #: src/components/data/sidebar-data.ts:151
-msgid "Profile"
-msgstr "پروفائل"
+#~ msgid "Profile"
+#~ msgstr "پروفائل"
 
 #: src/routes/_authenticated/index.tsx:292
 msgid "Projected Growth"
@@ -209,9 +368,41 @@ msgstr "متوقع ترقی"
 msgid "Recent Transactions"
 msgstr "حالیہ لین دین"
 
+#: src/features/donation/components/donation-drawer.tsx:458
+msgid "Record"
+msgstr "ریکارڈ"
+
+#: src/features/donation/DonationRoute.tsx:161
+msgid "Record and edit donations"
+msgstr "عطیات ریکارڈ کریں اور ترمیم کریں"
+
+#: src/features/donation/components/donation-drawer.tsx:154
+msgid "Record donation"
+msgstr "عطیہ ریکارڈ کریں"
+
+#: src/features/donation/components/donation-drawer.tsx:145
+msgid "Record Donation"
+msgstr "عطیہ ریکارڈ کریں"
+
+#: src/features/donation/components/donation-empty.tsx:22
+msgid "Record your first donation to start tracking."
+msgstr "ٹریکنگ شروع کرنے کے لیے اپنا پہلا عطیہ ریکارڈ کریں۔"
+
+#: src/components/data/sidebar-data.ts:56
+msgid "Reports"
+msgstr "رپورٹس"
+
+#: src/features/donation/components/donation-drawer.tsx:458
+msgid "Save"
+msgstr "محفوظ کریں"
+
 #: src/routes/_authenticated/index.tsx:120
 msgid "Search"
 msgstr "تلاش"
+
+#: src/features/donation/components/donation-table.tsx:259
+msgid "Search donations..."
+msgstr "عطیات تلاش کریں..."
 
 #: src/routes/_authenticated/index.tsx:122
 msgid "Search for something..."
@@ -221,25 +412,38 @@ msgstr "کچھ تلاش کریں..."
 #~ msgid "Seed Data"
 #~ msgstr "نمونہ ڈیٹا"
 
-#: src/components/data/sidebar-data.ts:147
+#: src/features/donation/components/donation-drawer.tsx:415
+msgid "Select a payment method"
+msgstr "ادائیگی کا ایک طریقہ منتخب کریں"
+
+#: src/components/data-table/bulk-actions.tsx:211
+msgid "selected"
+msgstr "منتخب"
+
+#: src/components/app-sidebar.tsx:41
+#: src/components/app-sidebar.tsx:44
 msgid "Settings"
 msgstr "ترتیبات"
 
 #: src/components/data/sidebar-data.ts:89
-msgid "Sign In"
-msgstr "سائن اِن"
+#~ msgid "Sign In"
+#~ msgstr "سائن اِن"
 
 #: src/components/data/sidebar-data.ts:93
-msgid "Sign In (2 Col)"
-msgstr "سائن اِن (2 کالم)"
+#~ msgid "Sign In (2 Col)"
+#~ msgstr "سائن اِن (2 کالم)"
 
 #: src/components/data/sidebar-data.ts:97
-msgid "Sign Up"
-msgstr "سائن اَپ"
+#~ msgid "Sign Up"
+#~ msgstr "سائن اَپ"
 
-#: src/components/data/sidebar-data.ts:47
+#: src/components/data/sidebar-data.ts:33
 msgid "Startup"
 msgstr "اسٹارٹ اَپ"
+
+#: src/features/donation/components/donation-table.tsx:134
+msgid "Status"
+msgstr "حیثیت"
 
 #: src/routes/_authenticated/index.tsx:99
 msgid "Subscription"
@@ -261,10 +465,13 @@ msgstr "کام کا عنوان"
 msgid "This quarter"
 msgstr "اس سہ ماہی"
 
-#: src/components/data/sidebar-data.ts:60
 #: src/routes/_authenticated/todo.tsx:87
 msgid "Todo"
 msgstr "ٹوڈو"
+
+#: src/features/donation/components/donation-table.tsx:273
+msgid "Toggle columns"
+msgstr "کالم تبدیل کریں"
 
 #: src/routes/_authenticated/todo.tsx:195
 msgid "Toggle task"
@@ -275,12 +482,12 @@ msgid "Total Sales & Cost"
 msgstr "کل فروخت اور لاگت"
 
 #: src/components/data/sidebar-data.ts:115
-msgid "Unauthorized"
-msgstr "غیر مجاز"
+#~ msgid "Unauthorized"
+#~ msgstr "غیر مجاز"
 
 #: src/components/data/sidebar-data.ts:75
-msgid "Vendors"
-msgstr "فراہم کنندگان"
+#~ msgid "Vendors"
+#~ msgstr "فراہم کنندگان"
 
 #: src/routes/_authenticated/index.tsx:209
 msgid "View all"

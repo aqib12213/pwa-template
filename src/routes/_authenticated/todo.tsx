@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/empty";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { todoDb } from "@/db/todo-db";
+import { DB } from "@/db/db";
 
 export const Route = createFileRoute("/_authenticated/todo")({
 	component: TodoRoute,
@@ -37,7 +37,7 @@ function TodoRoute() {
 	const [filter, setFilter] = useState<TodoFilter>("all");
 
 	const todos = useLiveQuery(
-		async () => todoDb.todos.orderBy("createdAt").reverse().toArray(),
+		async () => DB.todos.orderBy("createdAt").reverse().toArray(),
 		[]
 	);
 
@@ -65,7 +65,7 @@ function TodoRoute() {
 			return;
 		}
 
-		await todoDb.todos.add({
+		await DB.todos.add({
 			title,
 			completed: false,
 			createdAt: Date.now(),
@@ -74,7 +74,7 @@ function TodoRoute() {
 	};
 
 	const clearCompleted = async () => {
-		await todoDb.todos.filter((item) => item.completed).delete();
+		await DB.todos.filter((item) => item.completed).delete();
 	};
 
 	return (
@@ -198,7 +198,7 @@ function TodoRoute() {
 													if (!todo.id) {
 														return;
 													}
-													await todoDb.todos.update(todo.id, {
+													await DB.todos.update(todo.id, {
 														completed: checked === true,
 													});
 												}}
@@ -218,7 +218,7 @@ function TodoRoute() {
 													if (!todo.id) {
 														return;
 													}
-													await todoDb.todos.delete(todo.id);
+													await DB.todos.delete(todo.id);
 												}}
 												size="icon-xs"
 												variant="ghost"

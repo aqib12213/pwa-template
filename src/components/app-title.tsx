@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Signature } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { SidebarMenuButton } from "@/components/ui/sidebar";
 
 export function AppTitle() {
@@ -17,12 +16,12 @@ export function AppTitle() {
 					<span className="overflow-visible truncate font-semibold text-lg">
 						DONATIONS-CLIENT
 					</span>
-					<Badge
+					{/* <Badge
 						className="absolute -top-1 left-18 rounded-none"
 						variant="outline"
 					>
 						Beta
-					</Badge>
+					</Badge> */}
 				</div>
 			</SidebarMenuButton>
 		</Link>
