@@ -64,8 +64,8 @@ msgstr "اپنا پہلا کام شامل کریں تاکہ اپنے کام کا
 msgid "All"
 msgstr "تمام"
 
-#: src/features/donation/components/donation-drawer.tsx:240
 #: src/features/donation/components/donation-drawer.tsx:245
+#: src/features/donation/components/donation-drawer.tsx:250
 #: src/features/donation/components/donation-table.tsx:116
 msgid "Amount"
 msgstr "رقم"
@@ -87,7 +87,7 @@ msgstr "رقم"
 msgid "Bulk actions for {selectedCount} selected {entityName}{0}"
 msgstr "{selectedCount} منتخب {entityName}{0} کے لیے بلک ایکشنز"
 
-#: src/features/donation/components/donation-drawer.tsx:461
+#: src/features/donation/components/donation-drawer.tsx:509
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
@@ -99,8 +99,8 @@ msgstr "منسوخ کریں"
 #~ msgid "Cash"
 #~ msgstr ""
 
-#: src/features/donation/components/donation-drawer.tsx:368
-#: src/features/donation/components/donation-drawer.tsx:372
+#: src/features/donation/components/donation-drawer.tsx:373
+#: src/features/donation/components/donation-drawer.tsx:377
 #: src/features/donation/components/donation-table.tsx:84
 msgid "Category"
 msgstr "زمرہ"
@@ -139,7 +139,7 @@ msgstr "ٹھیکیدار کا نام"
 #~ msgid "Currencies"
 #~ msgstr "کرنسیاں"
 
-#: src/features/donation/components/donation-drawer.tsx:274
+#: src/features/donation/components/donation-drawer.tsx:279
 #: src/features/donation/components/donation-table.tsx:104
 msgid "Currency"
 msgstr "کرنسی"
@@ -154,8 +154,8 @@ msgstr "کرنسی"
 msgid "Dashboard"
 msgstr "ڈیش بورڈ"
 
-#: src/features/donation/components/donation-drawer.tsx:330
-#: src/features/donation/components/donation-drawer.tsx:334
+#: src/features/donation/components/donation-drawer.tsx:335
+#: src/features/donation/components/donation-drawer.tsx:339
 #: src/features/donation/components/donation-table.tsx:58
 msgid "Date"
 msgstr "تاریخ"
@@ -185,12 +185,12 @@ msgstr "عطیات"
 msgid "Donor"
 msgstr "عطیہ دہندہ"
 
-#: src/features/donation/components/donation-drawer.tsx:186
-#: src/features/donation/components/donation-drawer.tsx:190
+#: src/features/donation/components/donation-drawer.tsx:191
+#: src/features/donation/components/donation-drawer.tsx:195
 msgid "Donor name"
 msgstr "عطیہ دہندہ کا نام"
 
-#: src/features/donation/components/donation-drawer.tsx:253
+#: src/features/donation/components/donation-drawer.tsx:258
 msgid "e.g., 200.00"
 msgstr "مثلاً 200.00"
 
@@ -198,11 +198,11 @@ msgstr "مثلاً 200.00"
 #~ msgid "e.g., 25.00"
 #~ msgstr ""
 
-#: src/features/donation/components/donation-drawer.tsx:379
+#: src/features/donation/components/donation-drawer.tsx:384
 msgid "e.g., General"
 msgstr "مثلاً جنرل"
 
-#: src/features/donation/components/donation-drawer.tsx:197
+#: src/features/donation/components/donation-drawer.tsx:202
 msgid "e.g., John Doe"
 msgstr "مثلاً John Doe"
 
@@ -212,7 +212,7 @@ msgstr "مثلاً John Doe"
 msgid "Edit"
 msgstr "ترمیم"
 
-#: src/features/donation/components/donation-drawer.tsx:152
+#: src/features/donation/components/donation-drawer.tsx:157
 msgid "Edit donation"
 msgstr "عطیہ میں ترمیم کریں"
 
@@ -255,6 +255,26 @@ msgstr "موجودہ مالیاتی سال کے لیے مالیاتی جائزہ
 #: src/components/data/sidebar-data.ts:38
 msgid "General"
 msgstr "عمومی"
+
+#: src/components/data-table/pagination.tsx:93
+msgid "Go to first page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:147
+msgid "Go to last page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:136
+msgid "Go to next page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:121
+msgid "Go to page {pageNumber}"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:104
+msgid "Go to previous page"
+msgstr ""
 
 #: src/components/app-sidebar.tsx:50
 #: src/components/app-sidebar.tsx:53
@@ -317,8 +337,8 @@ msgstr "ابھی تک کوئی کام نہیں"
 #~ msgid "Not Found"
 #~ msgstr "نہیں ملا"
 
-#: src/features/donation/components/donation-drawer.tsx:436
-#: src/features/donation/components/donation-drawer.tsx:439
+#: src/features/donation/components/donation-drawer.tsx:484
+#: src/features/donation/components/donation-drawer.tsx:487
 #: src/features/donation/components/donation-table.tsx:148
 msgid "Notes"
 msgstr "نوٹس"
@@ -331,7 +351,7 @@ msgstr "اطلاعات"
 msgid "One-Time Password"
 msgstr "ون ٹائم پاس ورڈ"
 
-#: src/features/donation/components/donation-drawer.tsx:446
+#: src/features/donation/components/donation-drawer.tsx:494
 msgid "Optional"
 msgstr "اختیاری"
 
@@ -343,6 +363,11 @@ msgstr "اختیاری"
 #~ msgid "OTP"
 #~ msgstr "او ٹی پی"
 
+#: src/components/data-table/pagination.tsx:51
+#: src/components/data-table/pagination.tsx:81
+msgid "Page {currentPage} of {totalPages}"
+msgstr ""
+
 #: src/components/data/sidebar-data.ts:82
 #~ msgid "Pages"
 #~ msgstr "صفحات"
@@ -351,8 +376,9 @@ msgstr "اختیاری"
 msgid "Payment"
 msgstr "ادائیگی"
 
-#: src/features/donation/components/donation-drawer.tsx:403
-#: src/features/donation/components/donation-drawer.tsx:407
+#: src/features/donation/components/donation-drawer.tsx:408
+#: src/features/donation/components/donation-drawer.tsx:413
+#: src/features/donation/components/donation-drawer.tsx:450
 msgid "Payment method"
 msgstr "ادائیگی کا طریقہ"
 
@@ -368,7 +394,7 @@ msgstr "متوقع ترقی"
 msgid "Recent Transactions"
 msgstr "حالیہ لین دین"
 
-#: src/features/donation/components/donation-drawer.tsx:458
+#: src/features/donation/components/donation-drawer.tsx:506
 msgid "Record"
 msgstr "ریکارڈ"
 
@@ -376,11 +402,11 @@ msgstr "ریکارڈ"
 msgid "Record and edit donations"
 msgstr "عطیات ریکارڈ کریں اور ترمیم کریں"
 
-#: src/features/donation/components/donation-drawer.tsx:154
+#: src/features/donation/components/donation-drawer.tsx:159
 msgid "Record donation"
 msgstr "عطیہ ریکارڈ کریں"
 
-#: src/features/donation/components/donation-drawer.tsx:145
+#: src/features/donation/components/donation-drawer.tsx:150
 msgid "Record Donation"
 msgstr "عطیہ ریکارڈ کریں"
 
@@ -392,7 +418,11 @@ msgstr "ٹریکنگ شروع کرنے کے لیے اپنا پہلا عطیہ ر
 msgid "Reports"
 msgstr "رپورٹس"
 
-#: src/features/donation/components/donation-drawer.tsx:458
+#: src/components/data-table/pagination.tsx:74
+msgid "Rows per page"
+msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:506
 msgid "Save"
 msgstr "محفوظ کریں"
 
@@ -412,7 +442,8 @@ msgstr "کچھ تلاش کریں..."
 #~ msgid "Seed Data"
 #~ msgstr "نمونہ ڈیٹا"
 
-#: src/features/donation/components/donation-drawer.tsx:415
+#: src/features/donation/components/donation-drawer.tsx:423
+#: src/features/donation/components/donation-drawer.tsx:455
 msgid "Select a payment method"
 msgstr "ادائیگی کا ایک طریقہ منتخب کریں"
 

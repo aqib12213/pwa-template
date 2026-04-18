@@ -31,6 +31,10 @@ import {
     InputGroupInput,
 } from "@/components/ui/input-group";
 import {
+    NativeSelect,
+    NativeSelectOption,
+} from "@/components/ui/native-select";
+import {
     Select,
     SelectContent,
     SelectGroup,
@@ -403,42 +407,69 @@ export function DonationDrawer(props: {
                                             <FieldLabel>
                                                 <Trans>Payment method</Trans>
                                             </FieldLabel>
-                                            <Select
-                                                name={field.name}
-                                                onOpenChange={(openState) => {
-                                                    if (!openState) {
-                                                        field.handleBlur();
-                                                    }
-                                                }}
-                                                onValueChange={(value) => {
-                                                    field.handleChange(value ?? "");
-                                                }}
-                                                value={field.state.value}
-                                            >
-                                                <SelectTrigger
+                                            {isMobile ? (
+                                                <NativeSelect
                                                     aria-invalid={Boolean(errorMessage)}
                                                     aria-label={translate`Payment method`}
-                                                    className="w-full"
                                                     id={field.name}
+                                                    name={field.name}
+                                                    onBlur={field.handleBlur}
+                                                    onChange={(event) => {
+                                                        field.handleChange(event.currentTarget.value);
+                                                    }}
+                                                    value={field.state.value}
                                                 >
-                                                    <SelectValue
-                                                        placeholder={translate`Select a payment method`}
-                                                    />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectGroup>
-                                                        {PAYMENT_METHOD_VALUES.map((method) => (
-                                                            <SelectItem key={method} value={method}>
-                                                                {method
-                                                                    .replace(/_/g, " ")
-                                                                    .replace(/\b\w/g, (char) =>
-                                                                        char.toUpperCase()
-                                                                    )}
-                                                            </SelectItem>
-                                                        ))}
-                                                    </SelectGroup>
-                                                </SelectContent>
-                                            </Select>
+                                                    <NativeSelectOption disabled value="">
+                                                        {translate`Select a payment method`}
+                                                    </NativeSelectOption>
+                                                    {PAYMENT_METHOD_VALUES.map((method) => (
+                                                        <NativeSelectOption key={method} value={method}>
+                                                            {method
+                                                                .replace(/_/g, " ")
+                                                                .replace(/\b\w/g, (char) =>
+                                                                    char.toUpperCase()
+                                                                )}
+                                                        </NativeSelectOption>
+                                                    ))}
+                                                </NativeSelect>
+                                            ) : (
+                                                <Select
+                                                    name={field.name}
+                                                    onOpenChange={(openState) => {
+                                                        if (!openState) {
+                                                            field.handleBlur();
+                                                        }
+                                                    }}
+                                                    onValueChange={(value) => {
+                                                        field.handleChange(value ?? "");
+                                                    }}
+                                                    value={field.state.value}
+                                                >
+                                                    <SelectTrigger
+                                                        aria-invalid={Boolean(errorMessage)}
+                                                        aria-label={translate`Payment method`}
+                                                        className="w-full"
+                                                        id={field.name}
+                                                    >
+                                                        <SelectValue
+                                                            placeholder={translate`Select a payment method`}
+                                                        />
+                                                    </SelectTrigger>
+                                                    <SelectContent>
+                                                        <SelectGroup>
+                                                            {PAYMENT_METHOD_VALUES.map((method) => (
+                                                                <SelectItem key={method} value={method}>
+                                                                    {method
+                                                                        .replace(/_/g, " ")
+                                                                        .replace(/\b\w/g, (char) =>
+                                                                            char.toUpperCase()
+                                                                        )}
+                                                                </SelectItem>
+                                                            ))}
+                                                        </SelectGroup>
+                                                    </SelectContent>
+                                                </Select>
+                                            )}
                                             <FieldError>{errorMessage}</FieldError>
                                         </Field>
                                     );

@@ -64,8 +64,8 @@ msgstr "Apna pehla task shamil karein taa-ke apne kaam ko track karna shuru kare
 msgid "All"
 msgstr "Tamam"
 
-#: src/features/donation/components/donation-drawer.tsx:240
 #: src/features/donation/components/donation-drawer.tsx:245
+#: src/features/donation/components/donation-drawer.tsx:250
 #: src/features/donation/components/donation-table.tsx:116
 msgid "Amount"
 msgstr "Raqam"
@@ -87,7 +87,7 @@ msgstr "Raqam"
 msgid "Bulk actions for {selectedCount} selected {entityName}{0}"
 msgstr "{selectedCount} muntakhab {entityName}{0} ke liye bulk actions"
 
-#: src/features/donation/components/donation-drawer.tsx:461
+#: src/features/donation/components/donation-drawer.tsx:509
 msgid "Cancel"
 msgstr "Mansookh karein"
 
@@ -99,8 +99,8 @@ msgstr "Mansookh karein"
 #~ msgid "Cash"
 #~ msgstr ""
 
-#: src/features/donation/components/donation-drawer.tsx:368
-#: src/features/donation/components/donation-drawer.tsx:372
+#: src/features/donation/components/donation-drawer.tsx:373
+#: src/features/donation/components/donation-drawer.tsx:377
 #: src/features/donation/components/donation-table.tsx:84
 msgid "Category"
 msgstr "Zumra"
@@ -139,7 +139,7 @@ msgstr "Thekedar ka naam"
 #~ msgid "Currencies"
 #~ msgstr "Currencies"
 
-#: src/features/donation/components/donation-drawer.tsx:274
+#: src/features/donation/components/donation-drawer.tsx:279
 #: src/features/donation/components/donation-table.tsx:104
 msgid "Currency"
 msgstr "Karansi"
@@ -154,8 +154,8 @@ msgstr "Karansi"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: src/features/donation/components/donation-drawer.tsx:330
-#: src/features/donation/components/donation-drawer.tsx:334
+#: src/features/donation/components/donation-drawer.tsx:335
+#: src/features/donation/components/donation-drawer.tsx:339
 #: src/features/donation/components/donation-table.tsx:58
 msgid "Date"
 msgstr "Tareekh"
@@ -185,12 +185,12 @@ msgstr "Atiyat"
 msgid "Donor"
 msgstr "Atiya dene wala"
 
-#: src/features/donation/components/donation-drawer.tsx:186
-#: src/features/donation/components/donation-drawer.tsx:190
+#: src/features/donation/components/donation-drawer.tsx:191
+#: src/features/donation/components/donation-drawer.tsx:195
 msgid "Donor name"
 msgstr "Atiya dene walay ka naam"
 
-#: src/features/donation/components/donation-drawer.tsx:253
+#: src/features/donation/components/donation-drawer.tsx:258
 msgid "e.g., 200.00"
 msgstr "misal ke taur par, 200.00"
 
@@ -198,11 +198,11 @@ msgstr "misal ke taur par, 200.00"
 #~ msgid "e.g., 25.00"
 #~ msgstr ""
 
-#: src/features/donation/components/donation-drawer.tsx:379
+#: src/features/donation/components/donation-drawer.tsx:384
 msgid "e.g., General"
 msgstr "misal ke taur par, General"
 
-#: src/features/donation/components/donation-drawer.tsx:197
+#: src/features/donation/components/donation-drawer.tsx:202
 msgid "e.g., John Doe"
 msgstr "misal ke taur par, John Doe"
 
@@ -212,7 +212,7 @@ msgstr "misal ke taur par, John Doe"
 msgid "Edit"
 msgstr "Edit"
 
-#: src/features/donation/components/donation-drawer.tsx:152
+#: src/features/donation/components/donation-drawer.tsx:157
 msgid "Edit donation"
 msgstr "Atiya edit karein"
 
@@ -255,6 +255,26 @@ msgstr "Mojooda mali muddat ka mali jaiza."
 #: src/components/data/sidebar-data.ts:38
 msgid "General"
 msgstr "General"
+
+#: src/components/data-table/pagination.tsx:93
+msgid "Go to first page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:147
+msgid "Go to last page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:136
+msgid "Go to next page"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:121
+msgid "Go to page {pageNumber}"
+msgstr ""
+
+#: src/components/data-table/pagination.tsx:104
+msgid "Go to previous page"
+msgstr ""
 
 #: src/components/app-sidebar.tsx:50
 #: src/components/app-sidebar.tsx:53
@@ -317,8 +337,8 @@ msgstr "Abhi koi task nahi"
 #~ msgid "Not Found"
 #~ msgstr "Not Found"
 
-#: src/features/donation/components/donation-drawer.tsx:436
-#: src/features/donation/components/donation-drawer.tsx:439
+#: src/features/donation/components/donation-drawer.tsx:484
+#: src/features/donation/components/donation-drawer.tsx:487
 #: src/features/donation/components/donation-table.tsx:148
 msgid "Notes"
 msgstr "Notes"
@@ -331,7 +351,7 @@ msgstr "Ittilaat"
 msgid "One-Time Password"
 msgstr "One-Time Password"
 
-#: src/features/donation/components/donation-drawer.tsx:446
+#: src/features/donation/components/donation-drawer.tsx:494
 msgid "Optional"
 msgstr "Ikhtiyari"
 
@@ -343,6 +363,11 @@ msgstr "Ikhtiyari"
 #~ msgid "OTP"
 #~ msgstr "OTP"
 
+#: src/components/data-table/pagination.tsx:51
+#: src/components/data-table/pagination.tsx:81
+msgid "Page {currentPage} of {totalPages}"
+msgstr ""
+
 #: src/components/data/sidebar-data.ts:82
 #~ msgid "Pages"
 #~ msgstr "Pages"
@@ -351,8 +376,9 @@ msgstr "Ikhtiyari"
 msgid "Payment"
 msgstr "Adaigi"
 
-#: src/features/donation/components/donation-drawer.tsx:403
-#: src/features/donation/components/donation-drawer.tsx:407
+#: src/features/donation/components/donation-drawer.tsx:408
+#: src/features/donation/components/donation-drawer.tsx:413
+#: src/features/donation/components/donation-drawer.tsx:450
 msgid "Payment method"
 msgstr "Adaigi ka tareeqa"
 
@@ -368,7 +394,7 @@ msgstr "Mutawaqqa taraqqi"
 msgid "Recent Transactions"
 msgstr "Haalia lain den"
 
-#: src/features/donation/components/donation-drawer.tsx:458
+#: src/features/donation/components/donation-drawer.tsx:506
 msgid "Record"
 msgstr "Record"
 
@@ -376,11 +402,11 @@ msgstr "Record"
 msgid "Record and edit donations"
 msgstr "Atiyat record aur edit karein"
 
-#: src/features/donation/components/donation-drawer.tsx:154
+#: src/features/donation/components/donation-drawer.tsx:159
 msgid "Record donation"
 msgstr "Atiya record karein"
 
-#: src/features/donation/components/donation-drawer.tsx:145
+#: src/features/donation/components/donation-drawer.tsx:150
 msgid "Record Donation"
 msgstr "Atiya Record Karein"
 
@@ -392,7 +418,11 @@ msgstr "Tracking shuru karne ke liye apna pehla atiya record karein."
 msgid "Reports"
 msgstr "Reports"
 
-#: src/features/donation/components/donation-drawer.tsx:458
+#: src/components/data-table/pagination.tsx:74
+msgid "Rows per page"
+msgstr ""
+
+#: src/features/donation/components/donation-drawer.tsx:506
 msgid "Save"
 msgstr "Save"
 
@@ -412,7 +442,8 @@ msgstr "Kuch talaash karein..."
 #~ msgid "Seed Data"
 #~ msgstr "Seed Data"
 
-#: src/features/donation/components/donation-drawer.tsx:415
+#: src/features/donation/components/donation-drawer.tsx:423
+#: src/features/donation/components/donation-drawer.tsx:455
 msgid "Select a payment method"
 msgstr "Adaigi ka tareeqa muntakhab karein"
 
