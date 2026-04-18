@@ -5,9 +5,9 @@ import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
     Drawer,
-    DrawerContent,
     DrawerFooter,
     DrawerHeader,
+    DrawerPopup,
     DrawerTitle,
 } from "@/components/ui/drawer";
 import {
@@ -31,9 +31,13 @@ import {
     InputGroupInput,
 } from "@/components/ui/input-group";
 import {
-    NativeSelect,
-    NativeSelectOption,
-} from "@/components/ui/native-select";
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import {
     amountToCents,
@@ -134,16 +138,15 @@ export function DonationDrawer(props: {
 
     return (
         <Drawer
-            direction={isMobile ? "bottom" : "right"}
-            modal={false}
             onOpenChange={onOpenChange}
             open={open}
+            position={isMobile ? "bottom" : "right"}
         >
             <Button onClick={onRecordClick} size="sm">
                 <Trans>Record Donation</Trans>
             </Button>
 
-            <DrawerContent className="overflow-hidden">
+            <DrawerPopup className="overflow-hidden" variant="inset">
                 <DrawerHeader>
                     <DrawerTitle>
                         {editingDonationId ? (
@@ -400,26 +403,42 @@ export function DonationDrawer(props: {
                                             <FieldLabel>
                                                 <Trans>Payment method</Trans>
                                             </FieldLabel>
-                                            <NativeSelect
-                                                aria-invalid={Boolean(errorMessage)}
-                                                aria-label={translate`Payment method`}
-                                                onBlur={field.handleBlur}
-                                                onChange={(event) => {
-                                                    field.handleChange(event.currentTarget.value);
+                                            <Select
+                                                name={field.name}
+                                                onOpenChange={(openState) => {
+                                                    if (!openState) {
+                                                        field.handleBlur();
+                                                    }
+                                                }}
+                                                onValueChange={(value) => {
+                                                    field.handleChange(value ?? "");
                                                 }}
                                                 value={field.state.value}
                                             >
-                                                <NativeSelectOption disabled value="">
-                                                    {translate`Select a payment method`}
-                                                </NativeSelectOption>
-                                                {PAYMENT_METHOD_VALUES.map((method) => (
-                                                    <NativeSelectOption key={method} value={method}>
-                                                        {method
-                                                            .replace(/_/g, " ")
-                                                            .replace(/\b\w/g, (char) => char.toUpperCase())}
-                                                    </NativeSelectOption>
-                                                ))}
-                                            </NativeSelect>
+                                                <SelectTrigger
+                                                    aria-invalid={Boolean(errorMessage)}
+                                                    aria-label={translate`Payment method`}
+                                                    className="w-full"
+                                                    id={field.name}
+                                                >
+                                                    <SelectValue
+                                                        placeholder={translate`Select a payment method`}
+                                                    />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectGroup>
+                                                        {PAYMENT_METHOD_VALUES.map((method) => (
+                                                            <SelectItem key={method} value={method}>
+                                                                {method
+                                                                    .replace(/_/g, " ")
+                                                                    .replace(/\b\w/g, (char) =>
+                                                                        char.toUpperCase()
+                                                                    )}
+                                                            </SelectItem>
+                                                        ))}
+                                                    </SelectGroup>
+                                                </SelectContent>
+                                            </Select>
                                             <FieldError>{errorMessage}</FieldError>
                                         </Field>
                                     );
@@ -460,7 +479,7 @@ export function DonationDrawer(props: {
                         </Button>
                     </DrawerFooter>
                 </form>
-            </DrawerContent>
+            </DrawerPopup>
         </Drawer>
     );
 }
